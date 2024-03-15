@@ -1,1 +1,12 @@
-test
+// comments
+
+sysout + ctrl + SPACE ==> System.out.println();
+
+data types:
+type        size    primitive value        value
+___        ____    _______________        _____
+bool       1 bit    yes                    -128 to 127
+int        4 bytes  yes                    -2 billion to 2 billion
+double     8 bytes  yes                    fractional # up to 15 digits
+char       2 bytes  yes                    single character/ASCII value 
+string     varies   (no)reference          a sequence of characters
