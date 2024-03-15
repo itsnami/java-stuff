@@ -5,13 +5,17 @@ sysout + ctrl + SPACE ==> System.out.println();
 data types:
 type        size    primitive value        value
 ___        ____    _______________        _____
-bool       1 bit    yes                    true or false
-int        4 bytes  yes                    -2 billion to 2 billion
-float      4 bytes  yes                    fractional # up to 6-7 digits: ex- 3.1412121f ("f" is requied for FLOAT)
-double     8 bytes  yes                    fractional # up to 15 digits
-char       2 bytes  yes                    single character/ASCII value 
+bool       1 bit     yes                    true or false
+byte       1 byte    yes                    -128 to 127
+short      2 bytes   yes                    -32,768 to 32,767
+int        4 bytes   yes                    -2 billion to 2 billion
+long       8 bytes   yes
+float      4 bytes   yes                    fractional # up to 6-7 digits: ex- 3.1412121f ("f" is requied for FLOAT)
+double     8 bytes   yes                    fractional # up to 15 digits
+char       2 bytes   yes                    single character/ASCII value 
 string     varies   (no)reference          a sequence of characters
 
 references:
 are user defined
 
+variable declaration + assignment = initialization
