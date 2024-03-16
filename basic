@@ -23,7 +23,37 @@ variable declaration + assignment = initialization
 null value:
 ex: String temp; OR String temp = null;
 
-########################  ACCEPTING USER INPUT
+####################################################################### ACCEPTING USER INPUT ##################################################
 (import java.util.Scanner)
 
-Scanner
+Scanner // all things in java are classes and objects 
+    Scanner here is such an example
+
+Scanner scanner = new Scanner(System.in) // you are essentially just making a new Class
+ex:    
+    String str_name = scanner.nextLine();/or some other method dependingly
+    int int_name  scanner.nextInt();/ or some other method.. 
+
+!!!!!!     when using scanner.nextInt();/or any other --  use nextLine(); immediately on the next line - to avoid getting lines skipped (due to some buggy)
+##################################################################################################### EXPRESSIONS ##################################################
+
+expressions = openrands (values, vars, numbers, quantity) + operators (+ - * / %)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
