@@ -1,1 +1,6 @@
+input from JOptionPane.showInputDialog will return a string, so do conversion 
+ex:        
+        int age = Integer.parseInt(JOptionPane.showInputDialog("enter your age: "));
+		JOptionPane.showMessageDialog(null,"you are "+age+" year(s) old");
 
+######################################################################################################
