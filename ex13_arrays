@@ -1,0 +1,29 @@
+package helloWorld;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// arrays - used to store multiple values in a single variable
+		
+		String[] cars = {"camaro", "corvette", "tesla"};
+		
+		cars[2] = "Mustang";
+		
+		System.out.println(cars[2]);
+		
+		// #################################
+		
+		String[] bikes = new String[3];
+		
+		bikes[0] = "bmw";
+		bikes[1] = "haya";
+		bikes[2] = "suz";
+		
+		for(int i=0; i<bikes.length; i++) {
+			System.out.println(bikes[i]);
+		}
+	}
+    
+}
