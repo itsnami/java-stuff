@@ -1,0 +1,29 @@
+package helloWorld;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		String day = "pizz";
+		
+		switch (day){
+			case "Sunday": System.out.println("It's " + day);
+			break;
+			case "Monday": System.out.println("It's " + day);
+			break;
+			case "Tuesday": System.out.println("It's " + day);
+			break;
+			case "Wednesday": System.out.println("It's " + day);
+			break;
+			case "Thursday": System.out.println("It's " + day);
+			break;
+			case "Friday": System.out.println("It's " + day);
+			break;
+			case "Saturday": System.out.println("It's " + day);
+			break;
+			default: System.out.println("not a week of the day");
+		}
+	}
+
+}
