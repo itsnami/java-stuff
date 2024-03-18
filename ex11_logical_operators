@@ -1,0 +1,41 @@
+package helloWorld;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		int temp = 25;
+		
+		if (temp > 30) {
+			System.out.println("Its hot ");
+		}
+		else if (temp>=20 && temp<=30) {
+			System.out.println("Its warm ");
+		}
+		else {
+			System.out.println("Its cold ");
+		}
+		
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("You are playing a game; press q or Q to quit!");
+		String response = scanner.next();
+		
+		if (response.equals("q") || response.equals("Q")) {
+			System.out.println("you quit the game");
+		}
+		else {
+			System.out.println("you are still playing * * ");
+		}
+		
+//		if (!response.equals("q") && !response.equals("Q")) {
+//			System.out.println("you are still playing * * ");
+//		}
+//		else {
+//			System.out.println("you quit the game");
+//		}
+	}
+
+}
