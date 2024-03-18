@@ -1,0 +1,21 @@
+package helloWorld;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		int age = 19;
+				
+		if (age >= 18) {
+			System.out.println("You are an adult");
+		}
+		else if(age >=75) {
+			System.out.println("ok boomer");
+		}
+		else {
+			System.out.println("you are not an adult");
+		}
+	}
+
+}
