@@ -1,0 +1,45 @@
+package helloWorld2;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// constructor - special method that is called when an object is instantiated (created)
+		
+		Human human = new Human("rick", 65, 70);
+		Human human2 = new Human("mort", 17, 50);
+		
+		System.out.println(human.name);
+		System.out.println(human2.name);
+		
+		human2.eat();
+		human.drink();
+		
+	}
+}
+
+###################################################################### Human.java file
+
+package helloWorld2;
+
+public class Human { //class
+	
+	String name;
+	int age;
+	double weight;
+	
+	Human(String name, int age, double weight){ // object/--(here) constructor
+		
+		this.name = name;
+		this.age = age;
+		this.weight = weight;
+		
+	}
+	void eat() {
+		System.out.println(this.name + " is eating");
+	}
+	void drink() {
+		System.out.println(this.name + " is drinking");
+	}
+}
+
