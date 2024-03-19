@@ -1,0 +1,33 @@
+package helloWorld2;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// for-each - traversing techniques to iterate through the elements in an array/collection
+		//	less steps, more readable
+		//	less flexible
+		
+		String[] animals = {"cat", "dog", "bird", "fish"};
+		
+		ArrayList<String> animals1 = new ArrayList<String>();
+		
+		
+		animals1.add("cat");
+		animals1.add("dog");
+		animals1.add("kite");
+		
+		for(String i : animals) {
+			System.out.println(i);
+		}
+		
+		System.out.println("");
+		
+		
+		for(String i : animals) {
+			System.out.println(i);
+		}
+	}
+
+}
