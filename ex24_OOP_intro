@@ -1,0 +1,47 @@
+package helloWorld2;
+//	OOP
+
+public class Main {
+
+	public static void main(String[] args) {
+		// object - an instance of a class that may contain attributes and methods
+		// example: (phone, desk, table, coffee cup)
+		
+		Car myCar1 = new Car();
+		Car myCar2 = new Car();
+		
+		
+		System.out.println(myCar1.model);
+		System.out.println(myCar1.make);
+		
+		System.out.println(myCar2.price);
+		
+		myCar1.drive();
+	}
+}
+
+// classes either go here or to another file - create new Class in current project directory - ex: Car.java
+
+
+######################################################################################## this is in another file (Class)
+
+package helloWorld2;
+
+public class Car {
+	
+	String make = "Chevorlet";
+	String model = "Corvette";
+	int year = 2020;
+	String color = "blue";
+	double price = 50000.00;
+	
+	void drive() {
+		System.out.println("you are driving the car");
+	}
+	void brake() {
+		System.out.println("you stepped on the brake");
+	}
+	
+	
+	
+}
