@@ -1,0 +1,40 @@
+package helloWorld2;
+
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// method -  a block of code that is executed whenever it is called upon
+		
+		String name = "ada";
+		int age = 21;
+		hello(name, age); // arguments # here should match with parameters in method definition
+		
+		// ########2nd example
+		int x = 3;
+		int y = 4;
+		
+		int z = comparer(x, y);
+		System.out.println(z);
+		
+		// alternatively:
+		System.out.println(comparer(x, y));
+		
+		
+	}
+	// this area under is outside the area of the main method
+	
+	static void hello(String name, int age) { // parameter name does not have to be the same 
+		System.out.println("hello "+name+" ; you are "+age+" years old.");
+		
+	}
+	
+	static int comparer(int x, int y) {
+		// VOID is only used when you are not returning anything
+		int z = x + y;
+		return z; // return (x+y);
+	}
+	
+
+}
