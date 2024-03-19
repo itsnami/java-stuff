@@ -1,0 +1,46 @@
+package helloWorld2;
+
+// this is basically string formatting
+
+public class Main {
+
+	public static void main(String[] args) {
+		// printf() - an optional method to control, format, and display text to the console window
+		// 			two arguments = format string + (object/variable/value)
+		//			% [flags] [precision] [width] [conversion-character]
+		 
+		System.out.printf("format string %d", 123);
+		
+		boolean myBool = true;
+		char myChar = '#';
+		String myString = "ada longer";
+		int myInt = 10;
+		double myDouble = 1000;
+		
+		System.out.println(""); // ignore - used for spacing
+		
+		//[CONVERSION CHARACTERS]
+		System.out.printf("1: %b ", myBool);
+		System.out.printf("2: %c ", myChar);
+		System.out.printf("3: %s ", myString);
+		System.out.printf("4: %d ", myInt); // int - d for - decimal
+		System.out.printf("5: %f \n", myDouble); // f for floats and doubles // ignore \n
+	
+		
+		// [width]
+		//minimum # of characters to be written as output
+		System.out.printf("consider %15s ", myString); //%-15s will put the spaces after the string
+		
+		// [precision]
+		// set # of digits of precision when outputting floating-point values
+		System.out.printf("\nyou have this much money %.2f", myDouble);
+		
+		// [flags]
+		// adds an effect to the output based on the flag added to the format specifier
+		// - : left-justify
+		// + : output a plus(+) or minus (-) sign for a numeric value
+		// 0 : numeric values are zero-padded
+		// , : comma grouping separator if numbers > 1000
+		System.out.printf("\nyou have this much money %,f", myDouble);
+	}
+}
