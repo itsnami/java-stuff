@@ -18,7 +18,7 @@ public class Main {
 	}
 }
 
-###################################################################### Human.java file
+###################################################################### Human.java --another file -- diff class (same as in OOP ex)
 
 package helloWorld2;
 
