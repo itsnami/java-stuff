@@ -16,7 +16,8 @@ char       2 bytes   yes                    single character/ASCII value     - u
 String     varies   (no)reference          a sequence of characters
 ########################################################################################################################################
 references:
-are user defined
+    are user defined
+    have access to useful methods
 
 variable declaration + assignment = initialization
 
