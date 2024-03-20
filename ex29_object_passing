@@ -1,0 +1,47 @@
+// sending objects as arguments
+
+package helloWorld2;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+
+		Garage garage = new Garage();
+		
+		
+		Car car = new Car("BMW");
+		Car car2 = new Car("Mercedez");
+		
+		
+		garage.park(car);
+		garage.park(car2);
+		
+		
+		
+	}
+}
+
+######################################## Garage.java
+package helloWorld2;
+
+public class Garage {
+	
+	void park(Car car) {
+		System.out.println("the "+car.name+" is parked");
+	}
+	
+}
+######################################## Car.java
+package helloWorld2;
+
+public class Car {
+	String name;
+	
+	Car(String name){
+		this.name = name;
+	}
+	
+}
+
