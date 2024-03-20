@@ -1,0 +1,43 @@
+package helloWorld2;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// static = keyword modifier. (can be applied to variables, method, and even classes)
+		
+		// "static = modifier -  a static copy of a variable/method is created or shared"
+		
+		// the class "owns" the static member (anything that is static is also called a static member)
+		
+		// anything "owned" by the class is shared by all instances of that class
+		Friend friend1 = new Friend("spongebob");
+		Friend friend2 = new Friend("patrick");
+		
+		
+		System.out.println(Friend.numberOfFriends);
+		Friend.displayFriends();
+	}
+}
+
+############################################### Friend.java
+
+package helloWorld2;
+
+public class Friend {
+	
+	String name;
+	static int numberOfFriends; // if STATIC is added here, each object below-will get their own copy of numberOfFriends, (1)
+		// essentially static makes the variable assigned to the whole of that class
+	
+	Friend(String name) {
+		this.name = name;
+		numberOfFriends++;
+		
+	}
+	// applying static keyword to a method
+	static void displayFriends() {
+		System.out.println("you have "+numberOfFriends+" friends");
+	}
+	
+}
