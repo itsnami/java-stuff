@@ -1,0 +1,40 @@
+package helloWorld2;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// toString() =  a special method that all object inherit
+		//				that returns a string that "textually represents" an object
+		// 				can be use both implicitly and explicitly
+		
+		// PURPOSE - returns a STRING REPRESENTATION of ALL ATTRIBUTES of an object
+		
+		Car car = new Car();
+		
+//		System.out.println(car.make);
+//		System.out.println(car.model);
+//		System.out.println(car.color);
+//		System.out.println(car.year);
+//		
+		System.out.println(car.toString());
+		
+	}
+}
+############################################ Car.java class
+package helloWorld2;
+
+public class Car {
+	
+	String make = "ford";
+	String model = "mustang";
+	String color = "red";
+	int year = 2021;
+	
+	
+	public String toString() {
+		return make + "\n" + model +"\n" + color +"\n" + year;	
+	}
+}
+
+
