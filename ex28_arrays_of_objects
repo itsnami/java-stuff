@@ -1,0 +1,52 @@
+package helloWorld2;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// typical way of creating arrays:
+//		int[] numbers = new int[3];
+//		char[] character = new char[4];
+//		String[] string = new String[5];
+		
+		Food[] refrigerator = new Food[3];
+		
+		Food food1 = new Food("pizza");
+		Food food2 = new Food("burger");
+		Food food3 = new Food("sandwhich");
+		
+		refrigerator[0] = food1;
+		refrigerator[1] = food2;
+		refrigerator[2] = food3;
+		
+		
+		System.out.println(refrigerator[0].name);
+		
+		// ######## alternatively
+		System.out.println(); 
+		
+		// just declare the variables and call them as code
+		
+		Food mood1 = new Food("happy");
+		Food mood2 = new Food("sad");
+		Food mood3 = new Food("angry");
+		
+		Food[] refrigerator1 = {mood1, mood2 ,mood3};
+		System.out.println(refrigerator1[2].name);
+	}
+}
+
+################################################################ Food.java class
+package helloWorld2;
+
+public class Food {
+	
+	String name;
+	
+	Food(String name){
+		this.name = name;
+	}
+}
+
+
