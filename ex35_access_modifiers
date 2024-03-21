@@ -4,6 +4,6 @@ modifier	class        package        subclass        world
 _______         _____        _______        ________        _____
 
 public            Y            Y              Y                Y
-protected         Y            Y              Y                N
-no modifier       Y            Y              N                N
+protected         Y            Y              Y                N     // as long as it is a subclass
+no modifier       Y            Y              N                N    // default
 private           Y            N              N                N
