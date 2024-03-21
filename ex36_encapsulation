@@ -1,0 +1,50 @@
+package helloWorld2;
+// basically make the attributes of a class private so they cannot be directly accessed
+
+public class Main {
+
+	public static void main(String[] args) {
+		// encapsulation - attributes of a class will be hidden or private;
+				// using - PRIVATE keyword
+		// 		can be accessed only through methods (getters and setters)
+		// 		You should make attributes private if you don't have a reason to make them public/protected
+		Car car = new Car("Chevy","Camaro", 2021);
+	
+		System.out.println(car.getMake());
+		
+		car.setMake("FORD");
+		System.out.println(car.getMake());
+		
+	}
+}
+
+######################################### Car.java
+package helloWorld2;
+
+public class Car {
+	private String make;
+	private String model;
+	private int year;
+	
+	Car(String make, String model, int year){
+		this.setMake(make);
+		this.setModel(model);
+		this.year=year;
+	}
+	public String getMake() { // getter method - basically you make a publicly available method for the attributes
+		return make;
+	}
+	public String getModel() {
+		return model;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setMake(String make) {
+		this.make = make;
+	}
+	public void setModel(String model) {	// setter method - basically you make a publicly available method for the attributes
+		this.model = model;
+	}
+}
+
