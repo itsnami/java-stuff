@@ -1,0 +1,33 @@
+package helloWorld2;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+	// abstract - keyword - abstract CLASSES cannot be instantiated, but they can have a subclass
+	//	abstract METHODS are declared without an implementation (without a BODY)
+		
+		// Vehicle vehicle = new Vehicle(); //  this is ABSTRACTED out
+		Car car = new Car();
+		
+		car.go();
+	}// abstraction is used as a kind of safety mechanism to limit control 
+}
+
+##################################################### Vehicle.java
+package helloWorld2;
+// adding ABSTRACT here will make instantiation of Vehicle class in other class obsolete
+public abstract class Vehicle {
+	abstract void go();
+}
+
+##################################################### Car.java
+package helloWorld2;
+
+public class Car extends Vehicle{
+
+	@Override
+	void go() {
+		System.out.println("the driver is driving the car");		
+	}
+}
