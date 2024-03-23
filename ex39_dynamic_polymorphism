@@ -1,0 +1,62 @@
+package helloWorld2;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// dynamic polymorphism - after compilation (during runtime)
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		Animal animal;
+		
+		System.out.println("what animal do you want? ");
+		System.out.print("(1 = Dog) or (2 = Cat) : ");
+		
+		int choice = scanner.nextInt();
+		
+		if (choice == 1) {
+			animal = new Dog();
+			animal.speak();
+		}
+		else if(choice == 2) {
+			animal = new Cat();
+			animal.speak();
+		}
+		else {
+			animal = new Animal();
+			System.out.println("invalid choice");
+			animal.speak();
+		}
+	}
+}
+#################################################################### Animal.java
+package helloWorld2;
+
+public class Animal {
+	public void speak() {
+		System.out.println("animal goes grrr");	
+	}
+}
+
+#################################################################### Cat.java
+package helloWorld2;
+
+public class Cat extends Animal{
+	@Override
+	public void speak() {
+		System.out.println("cat goes meow");	
+	}
+}
+
+#################################################################### Dog.java
+package helloWorld2;
+
+public class Dog extends Animal{
+	@Override
+	public void speak() {
+		System.out.println("dog goes ruff");		
+	}
+}
+
+
