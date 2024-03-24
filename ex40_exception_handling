@@ -1,0 +1,40 @@
+package helloWorld2;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+	// exception - an event that occurs during the execution of a program that disrupts the normal flow of instructions
+		Scanner scanner = new Scanner(System.in);
+		try {
+			
+			
+			System.out.println("enter a whole number to divide: ");
+			int x = scanner.nextInt();
+			
+			System.out.println("enter a whole number to divide by: ");
+			int y = scanner.nextInt();
+			
+			int z = x/y;
+			System.out.println("result: "+z);
+			
+		}
+		catch(ArithmeticException e) {
+			System.out.println("you cant divide by zero");
+		}
+		catch(InputMismatchException e) {
+			System.out.println("enter numbers only");
+		}
+		catch(Exception e) { // this is also do-able -- but considered to be lazy and Not good practice
+			System.out.println("something went wrong");
+		}
+		finally { // will always execute weather or not we catch an exception
+			System.out.println("FINALLY WILL ALWAYS PRINT"); // also used to close any open Scanner
+			scanner.close();
+		}
+	}
+}
+
+
