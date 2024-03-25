@@ -1,0 +1,23 @@
+package helloWorld2;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		try {
+			FileWriter writer = new FileWriter("poem.txt"); //file path or file name
+			writer.write("rose are red");
+			writer.close();
+			
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+		
+		
+	}
+}
+
+
