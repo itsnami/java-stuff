@@ -1,0 +1,26 @@
+package helloWorld2;
+import java.io.File;
+
+public class Main {
+
+	public static void main(String[] args) {
+	// file =  an abstract representation of file and directory pathnames
+		
+		File file = new File("file_name.extention (if in local folder)");
+		//  OR a path name (when SINGLE \\ use DOUBLE \\ or / instead altogether)"
+		if (file.exists()) {
+			System.out.println("this file exists");
+			System.out.println(file.getPath());
+			System.out.println(file.getAbsolutePath());
+			System.out.println(file.isFile()); // checks if a file or not
+			file.delete(); // when called here will delete the file HERE listed in the IF logic
+			
+			// getPath - will print whatever is listed in the constructor of the File class
+		}
+		else {
+			System.out.println("doesnt exist");
+		}
+	}
+}
+
+
