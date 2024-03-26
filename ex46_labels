@@ -1,0 +1,55 @@
+package helloWorld2;
+
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.border.Border;
+
+public class Main {
+
+	public static void main(String[] args) {
+// JLabel - a GUI display area for a string of text, an image or both	
+		
+		// (if you have an image)
+		ImageIcon image =  new ImageIcon(Main.class.getResource("wizard.png")); // regular method dont seem to work. adding suggtd.
+		Border border = BorderFactory.createLineBorder(Color.green, 3);
+		
+		// creating labels
+		JLabel label = new JLabel(); // another way to set text: JLabel label = new JLabel("code bro")
+				// setting texts
+		label.setText("code bro");
+		label.setIcon(image);
+		label.setHorizontalTextPosition(JLabel.CENTER); // LEFT, RIGHT, CENTER of ImageIcon
+		label.setVerticalTextPosition(JLabel.TOP);//TOP, CENTER or BOTTOM of ImageIcon
+		label.setForeground(new Color (123, 50, 250));
+		label.setFont(new Font("MV Boli", Font.PLAIN, 30));
+		label.setIconTextGap(50);// set the gap of text to image
+		label.setBackground(Color.black);
+		label.setBackground(Color.black); // set backGround color
+		label.setOpaque(true); // set backGround color
+		label.setBorder(border);
+		
+		// moving the label around
+		label.setVerticalAlignment(JLabel.CENTER);
+		label.setHorizontalAlignment(JLabel.CENTER);
+//		label.setBounds(100, 200, 700, 700); 		// @ overwritten by frame.pack();
+		
+		
+		
+		JFrame frame = new JFrame();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame.setSize(1100, 1100);					// @ overwritten by frame.pack();
+//		frame.setLayout(null);						// @ overwritten by frame.pack();
+		frame.setVisible(true);	
+		frame.add(label);
+		frame.pack(); // auto adjusts the size of the frame to fit all the included "components"
+		// make sure to add all the components before using pack
+		
+	}
+}
+
+
