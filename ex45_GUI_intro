@@ -1,0 +1,63 @@
+package helloWorld2;
+
+import java.awt.Color;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
+public class Main {
+
+	public static void main(String[] args) {
+// JFrame -  a GUI window to add components to
+		
+// YOU CAN CREATE FRAM AS SHOWN HERE, OR CREATE A SEPERATE CLASS FILE AND MAKE THAT FILE A CHILD TO THE JFrame class as parent
+		
+		JFrame frame = new JFrame(); // creates a frame
+		frame.setTitle("NEW GUI");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // exit out of application //default is HIDE_ON_CLOSE
+		frame.setSize(420,420); //set x and y dimensions
+		frame.setResizable(false);
+		frame.setVisible(true); // make frame visible
+		
+		ImageIcon image = new ImageIcon("logo.png"); // changes the image icon on top-left
+		frame.setIconImage(image.getImage());		
+				
+		// frame.getContentPane().setBackground(Color.green); // for default colors OR:
+		frame.getContentPane().setBackground(new Color(0,0,0)); // RGB OR hex(0xFFFFFF)
+		
+		// this is commented out
+		
+//		MyFrame myFrame = new MyFrame(); // or just "new myFrame();"
+		
+			// but if you want to use the myFrame name (to make changes to it) - then you will have instantiate it
+
+	}
+}
+
+########################################################## MyFrame.java 
+
+package helloWorld2;
+
+import java.awt.Color;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame {
+
+	MyFrame(){
+		this.setTitle("NEW GUI");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // exit out of application //default is HIDE_ON_CLOSE
+		this.setSize(420,420); //set x and y dimensions
+		this.setResizable(false);
+		this.setVisible(true); // make this visible
+		
+		ImageIcon image = new ImageIcon("logo.png"); // changes the image icon on top-left
+		this.setIconImage(image.getImage());		
+				
+		// this.getContentPane().setBackground(Color.green); // for default colors OR:
+		this.getContentPane().setBackground(new Color(0,0,0)); // RGB OR hex(0xFFFFFF)
+	}
+}
+
+
