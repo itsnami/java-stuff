@@ -1,0 +1,69 @@
+package helloWorld2;
+
+public class Main {
+
+	public static void main(String[] args) {
+// JRadioButton = one or more buttons in a grouping in which only 1 may be selected per group
+		
+		new MyFrame();
+	}
+}
+
+
+################################################ MyFrame.java
+
+
+package helloWorld2;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+
+public class MyFrame extends JFrame implements ActionListener {
+	
+	JRadioButton pizza;
+	JRadioButton burger;
+	JRadioButton sandwhich;
+	
+	MyFrame(){
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout());
+		
+		pizza = new JRadioButton("pizza");
+		burger = new JRadioButton("burger");
+		sandwhich = new JRadioButton("sandwhich");
+		
+		ButtonGroup group = new ButtonGroup();
+		group.add(pizza);
+		group.add(burger);
+		group.add(sandwhich);
+		
+		pizza.addActionListener(this);
+		burger.addActionListener(this);
+		sandwhich.addActionListener(this);
+		
+		this.add(pizza);
+		this.add(burger);
+		this.add(sandwhich);
+		
+		
+		this.pack();
+		this.setVisible(true);
+	}
+		
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==pizza) {
+			System.out.println("PIZZA TIME!");
+		}else if(e.getSource()==burger){
+			System.out.println("INCOMING BURGER!");
+		}else if(e.getSource()==sandwhich){
+			System.out.println("GET THAT SANDWHICH!");
+		}
+		
+	}
+}
