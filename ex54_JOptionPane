@@ -1,0 +1,29 @@
+package helloWorld2;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+// JOptionPane = pops up a standard box that prompts users for a value or informs them of something	
+		
+		// MESSAGE DIAGLOG BOXES
+//		JOptionPane.showMessageDialog(null, "some info", "FYI", JOptionPane.PLAIN_MESSAGE);
+//		JOptionPane.showMessageDialog(null, "some info", "FYI", JOptionPane.INFORMATION_MESSAGE);
+//		JOptionPane.showMessageDialog(null, "some info", "FYI", JOptionPane.QUESTION_MESSAGE);
+//	  	JOptionPane.showMessageDialog(null, "some info", "FYI", JOptionPane.WARNING_MESSAGE);
+//		JOptionPane.showMessageDialog(null, "some info", "FYI", JOptionPane.ERROR_MESSAGE);
+	
+//		JOptionPane.showConfirmDialog(null, "confirm dialog", "TITLE DIALOG", JOptionPane.YES_NO_CANCEL_OPTION);
+//		JOptionPane.showInputDialog("state your name:");
+		
+		String[] responses = {"thanks", "ok", "sure sure"};
+		
+		// showOptionDialog basically COMBINES the last two
+		JOptionPane.showOptionDialog(null, "nice work", "brand new title", 
+				JOptionPane.YES_NO_CANCEL_OPTION, 
+				JOptionPane.INFORMATION_MESSAGE, null, responses, 0);
+	}
+}
+
+
