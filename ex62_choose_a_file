@@ -1,0 +1,55 @@
+package helloWorld2;
+
+public class Main {
+
+	public static void main(String[] args) {
+// JFileChooser	= a GUI mechanism that let's a user choose a file (useful for opening or saving a file)
+		new MyFrame();
+		
+	}
+}
+
+################################## MyFrame.java
+
+package helloWorld2;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame implements ActionListener{
+	JButton button;
+	MyFrame(){
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout());
+		
+		button = new JButton("choose file");
+		button.addActionListener(this);
+		
+		this.add(button);
+		this.pack();
+		this.setVisible(true);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==button) {
+			JFileChooser fileChooser = new JFileChooser();
+			
+			fileChooser.setCurrentDirectory(new File(".")); //here - CURRENT DIR - can set which LOCATION to open as default or PATH
+			
+			int response = fileChooser.showOpenDialog(null); //selects file to open
+//			int response = fileChooser.showSaveDialog(null); // saves a file - has more steps 
+			
+			if(response == JFileChooser.APPROVE_OPTION) {
+				File file = new File(fileChooser.getSelectedFile().getAbsolutePath());
+				System.out.println(file);
+			}
+		}
+	}
+}
