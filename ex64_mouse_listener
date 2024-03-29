@@ -1,0 +1,75 @@
+package helloWorld2;
+
+public class Main {
+
+	public static void main(String[] args) {
+//JColorChooser = a GUI mechanism that lets a user choose a color
+		new MyFrame();
+		
+	}
+}
+
+################################################ MyFrame.java
+package helloWorld2;
+
+import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class MyFrame extends JFrame implements MouseListener{
+	
+	JLabel label;
+	
+	MyFrame(){
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(500,500);
+		this.setLayout(null);
+		this.setLocationRelativeTo(null);
+		
+		label = new JLabel();
+		label.setBounds(0, 0, 100, 100);
+		label.setBackground(Color.RED);
+		label.setOpaque(true);
+		label.addMouseListener(this);
+		
+		this.add(label);
+		this.setVisible(true);
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// press and release
+		System.out.println("clicked");
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// pressed
+		System.out.println("pressed");
+		label.setBackground(Color.YELLOW);
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// released
+		System.out.println("released");
+		label.setBackground(Color.green);
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// enter area
+		System.out.println("entered");
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// exit area
+		System.out.println("exited");
+		label.setBackground(Color.RED);
+	}
+}
