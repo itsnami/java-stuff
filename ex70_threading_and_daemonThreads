@@ -1,0 +1,65 @@
+package helloWorld2;
+import java.io.*;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException, InterruptedException {
+// thread = a thread of execution in a program (kind of like a virtual CPU)
+		
+// The JVM allows an application to have multiple threads running concurrently
+// Each thread can execute part of your code in parallel with the main thread
+// Each thread has a priority
+// threads with higher priority are executed in preference compared to threads w/ a lower priority
+	
+// the JVM continues to execute threads until either:
+		// 1.the exit method of class Runtime has been called
+		// 2. all user threads have died
+		
+// when a JVM starts up, there is a thread which calls the main method
+			// this thread is called "main"
+		
+// Daemon thread is a low priority thread that runs in background to perform tasks such as garbage collection 
+// JVM terminates itself when all user threads(non-daemon threads) finish
+		
+		System.out.println(Thread.activeCount()); 
+		Thread.currentThread().setName("MAIN");
+		System.out.println(Thread.currentThread().getName());
+		Thread.currentThread().setPriority(10);
+		System.out.println(Thread.currentThread().getPriority()); // scale 1 - 10 (low to high)
+		System.out.println(Thread.currentThread().isAlive());
+		
+//		for (int i=3;i>0;i--) {
+//			System.out.println(i);
+//			Thread.sleep(2000);
+//		}
+//		System.out.println("time over");
+//		
+		// 2 ways to create a new thread (this) other being multi-threading
+		
+		//1. creating a child class of the Thread class
+		System.out.println("\n__SECOND THREAD__");
+		MyThread threadSub = new MyThread();
+		threadSub.setDaemon(true);
+		System.out.println(threadSub.isDaemon());
+		threadSub.start(); // the new thread has to be STARTED
+//		System.out.println(threadSub.isAlive());
+//		System.out.println(threadSub.isDaemon());
+		
+	}
+}
+
+#################################
+package helloWorld2;
+
+public class MyThread extends Thread {
+	@Override
+	public void run() {
+		if (this.isDaemon()) {
+			System.out.println("daemon thread running");
+		}
+		else {
+			System.out.println("User thread running");
+		}
+	}
+}
+
