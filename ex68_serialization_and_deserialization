@@ -38,7 +38,7 @@ public class Main {
 		System.out.println("object info saved");
 	}
 }
-#####################
+###########################################
 package helloWorld2;
 
 import java.io.Serializable;
@@ -84,7 +84,7 @@ public class Main {
 	}
 
 }
-##########################
+#######################################
 package Deserializer;
 
 import java.io.Serializable;
@@ -98,4 +98,12 @@ public class User implements Serializable{
 	}
 }
 
+######################################################## MORE TO KNOW
+
+NOTES:
+1. children classes of a paren class that implements serializable will do so as well
+2. static fields are not serializable (they belong to the class, not an individual object)
+3. the class's definition ("class file") itself is not recorded, cast it as the object type
+4. field declared as "transient" aren't serialized, they are ignored
+5. serialVersionUID is a unique version ID
 
