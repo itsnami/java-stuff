@@ -38,5 +38,64 @@ public class Main {
 		System.out.println("object info saved");
 	}
 }
+#####################
+package helloWorld2;
+
+import java.io.Serializable;
+
+public class User implements Serializable{
+	String name;
+	String passwd;
+	
+	public void sayHello() {
+		System.out.println("hello "+name);
+	}
+}
+
+###############################################DESERALIZATION#################################################
+package Deserializer;
+import java.io.*;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
+		// steps to Deserialize an object:
+		
+		// 1. your object class should implement Serializable interface
+		// 2. add import java.io.Serializable
+		// 3. FileInputStream fileIn = new FileInputStream(file path)
+		// 4. ObjectInputStream in = new ObjectInputStream(fileIn)
+		// 5. objectName = (Class) in.readObject();
+		// 6. in.close(); fileIn.close();
+
+		User user = null;
+		
+		FileInputStream fileIn = new FileInputStream("E:\\JAVA bro\\helloWorld2\\UserInfo.ser");
+		ObjectInputStream in = new ObjectInputStream(fileIn);
+		user = (User) in.readObject(); // casting DATA TYPE
+		in.close(); 
+		fileIn.close();
+		
+		
+		System.out.println(user.name);
+		System.out.println(user.passwd);
+		user.sayHello();
+		
+	}
+
+}
+##########################
+package Deserializer;
+
+import java.io.Serializable;
+
+public class User implements Serializable{
+	String name;
+	String passwd;
+	
+	public void sayHello() {
+		System.out.println("hello "+name);
+	}
+}
 
 
