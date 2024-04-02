@@ -1,0 +1,10 @@
+compile and run Java with Command Prompt
+____________________________________________
+
+1. Make sure you have JDK installed
+2. (optional) use a text editor and save a file as .java
+3. Open Command Prompt/Terminal on your computer
+4. set path=(location of JDK) ex: C:\Program File\Java|jdk-21.0.1\bin
+5. cd (where you java file is located) ex: C:Users\user\Desktop
+6. javac fileName.java (to compile)
+7. java fileName (to run a .class file, its PORTABLE (in byte code formate (but other system will need to have a JDK installed as well)))
