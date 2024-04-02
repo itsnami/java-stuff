@@ -1,0 +1,60 @@
+package helloWorld2;
+import java.io.*;
+import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+// Timer = a facility for threads to schedule tasks for future execution in a background thread
+		
+// TimerTask = a task that can be scheduled for one-time or repeated execution by a Timer
+		Timer timer = new Timer();
+		
+	//previous example	
+//		TimerTask task = new TimerTask() {
+//
+//			@Override
+//			public void run() {
+//				// when timer runs out - run is executed
+//				System.out.println("Task complete");
+//			}
+//			
+//		};	
+		//previous example	
+		
+		TimerTask task = new TimerTask() {
+			int counter = 10;
+			
+			@Override
+			public void run() {
+				if (counter >0) {
+					System.out.println(counter +" seconds");
+					counter--;
+				}
+				else {
+					System.out.println("april fools");
+					timer.cancel();
+				}
+			}
+			
+		};
+		Calendar date = Calendar.getInstance();
+		date.set(Calendar.YEAR, 2024);
+		date.set(Calendar.MONTH, Calendar.APRIL);
+		date.set(Calendar.DAY_OF_MONTH, 2);
+		date.set(Calendar.HOUR_OF_DAY, 0); //24h format
+		date.set(Calendar.MINUTE, 25);
+		date.set(Calendar.SECOND, 0);
+		date.set(Calendar.MILLISECOND, 0);
+		
+//		timer.schedule(task, 0); //default in Milliseconds
+//		timer.schedule(task, date.getTime());
+		
+		timer.scheduleAtFixedRate(task, date.getTime(), 1000); // repeat a task at a regular interval
+	
+	}
+}
+
+
