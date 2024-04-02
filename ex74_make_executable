@@ -1,0 +1,13 @@
+executable(.jar)
+
+create an executable jar with Eclipse IDE
+1. Right click on Java Project 
+2. Export
+3. Java > Runnable Jar file
+4. At Launch configuration, select your project (make sure it's set to "Main")
+5. At Export destination, select where tou wantthis jar file exported to
+6. Finish
+
+
+JAR file can be converted to an EXE file: see tutorial for how to:
+https://youtu.be/jKlyHG-zbjk
