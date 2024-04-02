@@ -73,3 +73,39 @@ public class MyGenericClass <T>{					 // <T, T2>
 	
 }
 ##########################################################  BOUNDED TYPES
+
+package helloWorld2;
+
+public class Main {
+
+	public static void main(String[] args) {
+// bounded types = allows you to create the objects of a generic class to have data of specific derived types. ex: numbers
+		
+		MyGenericClass<Integer,Integer> myInt = new MyGenericClass<>(1,2);
+		MyGenericClass<Double,Double> myDouble = new MyGenericClass<>(3.14,1.5);
+		
+		System.out.println(myInt.getValue());
+		System.out.println(myDouble.getValue());		
+	}
+}
+
+###############################
+package helloWorld2;
+// the extends followed by "CLASS DEFINITION" is what helps controls the type of input
+public class MyGenericClass <T extends Number, T2>{
+	
+	T x;
+	T2 y;
+	
+	MyGenericClass(T x, T2 y){ //constructor
+		this.x = x;
+		this.y = y;
+	}
+	public T2 getValue() { //getter method
+//		return x;
+		return y;
+	}
+	
+}
+
+
